@@ -1,0 +1,45 @@
+<html>
+<title>Home | Compass</title>
+<link href="iframes/resources/download.png" id="dynamic-favicon" rel="icon" type="image/png"/>
+<script>
+function applyBrandMode() {
+    const mode = localStorage.getItem("brandMode") || "normal";
+    const favicon = document.getElementById("dynamic-favicon");
+
+    if (mode === "alt") {
+        document.title = "Dashboard";
+        favicon.href = "iframes/resources/canvas__q38609a28.png";
+    } else {
+        document.title = "Home | Compass";
+        favicon.href = "iframes/resources/download__q38609a28.png";
+    }
+}
+
+// Run on page load
+applyBrandMode();
+</script>
+<style type="text/css"> 
+        html { 
+            overflow: auto; 
+        } 
+          
+        html, 
+        body, 
+        div, 
+        iframe { 
+            margin: 0px; 
+            padding: 0px; 
+            height: 100%; 
+            border: none; 
+        } 
+          
+        iframe { 
+            display: block; 
+            width: 100%; 
+            border: none; 
+            overflow-y: auto; 
+            overflow-x: hidden; 
+        } 
+    </style>
+<iframe allowfullscreen="" frameborder="0" height="100%" src="FNAE-HTML5-1.2.3/index.html" width="100%"></iframe>
+</html>
